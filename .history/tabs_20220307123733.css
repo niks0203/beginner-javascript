@@ -1,0 +1,28 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.tabs-btns {
+    margin-bottom: 20px;
+}
+
+.tabs-wrapper{
+    padding:40px;
+}
+.tabs-btns {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: CENTER;
+}
+.tabs-btns button{
+    margin-right: 20px;
+   
+}
+.panel-box {
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+    padding:20px;
+    background:#fff;
+ }

@@ -1,0 +1,31 @@
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.tabs-btns {
+    margin-bottom: 20px;
+}
+
+.tabs-wrapper{
+    padding:40px;
+}
+.tabs-btns {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: CENTER;
+}
+.tabs-btns button{
+    margin-right: 20px;
+   
+}
+.panel-box {
+    -webkit-box-shadow: 0 8px 6px -6px black;
+    -moz-box-shadow: 0 8px 6px -6px black;
+         box-shadow: 0 8px 6px -6px black;
+    padding:20px;
+    background:#fff;
+ }
+ .panel-box h2{
+     color:#000;
+ }
