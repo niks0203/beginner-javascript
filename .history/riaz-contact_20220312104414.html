@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riaz - contact</title>
+</head>
+
+<body>
+    <div class="form-wrapper all-form-down-wrap">
+
+        <div class="form-inner-wrapper">
+            <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST"
+                class="all-form-down-data" id="contact-us-investor" onsubmit="return validateRecaptcha();">
+
+                <input type=hidden name='captcha_settings'
+                    value='{"keyname":"RiazCapital","fallback":"true","orgId":"00D37000000Ksug","ts":""}'>
+                <input type=hidden name="oid" value="00D37000000Ksug">
+                <input type=hidden name="retURL" value="https://riazcapital.com/thank-you">
+                <div class="field-list clear">
+                    <fieldset id="name-yui_3_17_2_1_1604517489640_3737" class="form-item fields name required">
+
+                        <legend class="title">Name <span class="required" aria-hidden="true">*</span></legend>
+
+                        <div class="field first-name">
+
+                            <label class="option" for="first_name">
+                                <input class="field-element field-control" id="first_name" maxlength="40"
+                                    name="first_name" size="20" type="text" data-title="First" aria-required="true"
+                                    required />
+                                <span class="caption-text">First Name</span>
+                            </label>
+
+                        </div>
+                        <div class="field last-name">
+                            <label class="caption" for="last_name">
+                                <input class="field-element field-control" id="last_name" maxlength="80"
+                                    name="last_name" size="20" type="text" data-title="Last" aria-required="true"
+                                    required />
+                                <span class="caption-text">Last Name</span>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <div id="number-yui_3_17_2_1_1604517375946_26865" class="form-item field number">
+                        <label class="title" for="number-yui_3_17_2_1_1604517375946_26865-field"> Phone*</label><input
+                            class="field-element" id="phone" maxlength="40" name="phone" size="20" type="tel"
+                            pattern="[0-9]{10}" required />
+                    </div>
+                    <div id="email-yui_3_17_2_1_1604517489640_3738" class="form-item field email required">
+                        <label class="title" for="email-yui_3_17_2_1_1604517489640_3738-field">Email <span
+                                class="required" aria-hidden="true">*</span>
+                        </label><input class="field-element" id="email" maxlength="80" name="email" size="20"
+                            type="text" aria-required="true" required />
+                    </div>
+                    <div id="select-yui_3_17_2_1_1604978065613_32262" class="form-item field select required">
+                        <label class="title" for="select-yui_3_17_2_1_1604978065613_32262-field">What is your question
+                            regarding? <span class="required" aria-hidden="true">*</span></label>
+                        <select class="invest-offer-select field-element" id="00N1G000007gnUt" name="00N1G000007gnUt"
+                            title="What is your question regarding?" aria-required="true" required>
+                            <option value="">--None--</option>
+                            <option value="Investment Offerings">Investment Offerings</option>
+                            <option value="Acquisitions">Acquisitions</option>
+                            <option value="Planned or Active Construction">Planned or Active Construction</option>
+                            <option value="Occupied Residences">Occupied Residences</option>
+                            <option value="Career Opportunities">Career Opportunities</option>
+                            <option value="Media Opportunities">Media Opportunities</option>
+                        </select>
+
+                    </div>
+                    <div id="textarea-yui_3_17_2_1_1604517489640_3740" class="form-item field textarea">
+                        <label class="title" for="textarea-yui_3_17_2_1_1604517489640_3740-field">Any other information
+                            you would like to share?</label>
+
+                        <textarea class="field-element " id="00N1G000007gnUy" name="00N1G000007gnUy" rows="3"
+                            type="text" wrap="soft"></textarea>
+                    </div>
+
+                    <!--start of additional fields -->
+                    <!-- <div class="investofferDiv">
+                                     <div class="form-item field select">
+                                     <p>Preferred time to Invest for Ozone Fund:</p>-->
+                    <!-- <select class="field-element"  id="00N1G000007gxXO" name="00N1G000007gxXO" title="Preferred time to Invest for Ozone Fund">
+                                        <option value="">--None--</option><option value="12/31/21">12/31/21</option>
+                                        <option value="3/31/22">03/31/22</option>
+                                        <option value="6/30/22">06/30/22</option>
+                                        <option value="Later than 2022">Later than 2022</option>
+                                        </select>-->
+                    <!--      <input class="field-element" id="datevisible2" onchange="formValidation2()" name="date" size="12" type="date">
+                <span class="dateInput dateOnlyInput">
+                  <input class="hide-date2" id="00N1G000007gxXO" name="00N1G000007gxXO" size="12" type="text" /></span><br>
+                                       </div>
+            
+                                   <div  class="form-item field select">
+                                   <p>What is the date of your capital gain?</p>
+                                     <input class="field-element" id="datevisible" onchange="formValidation()" name="date" size="12" type="date">
+                            <div class="form-item field">
+                                   <span class="dateInput dateOnlyInput">
+                                    <input class="field-element hide-date"  id="00N1G000007gxXT" name="00N1G000007gxXT" size="12" type="text" />
+                                </span>
+                             </div>
+                                 </div>
+    
+                                <div class="form-item field select">
+                                <p>What is the type of your capital gain?</p>
+                                <select class="gain-select field-element"  id="00N1G000007gxXY" name="00N1G000007gxXY" title="What is the type of your capital gain?" class="gain-select">
+                               <option value="">--None--</option>
+    <option value="Short term gain">Short term gain</option>
+    <option value="Long Term gain">Long Term gain</option>
+    <option value="Other">Other</option>
+                                </select>
+                                  </div>
+            
+                                 <div class="other-field2 form-item field select">
+                                   <p> If Other, please state below <span class="required" aria-hidden="true">*</span></p>
+                                    <textarea class="field-element" id="00N1G000007gxXd" name="00N1G000007gxXd" type="text" wrap="soft"></textarea>
+                                    </div>
+                    </div>-->
+                    <!-- end of additional fields-->
+
+
+                    <div id="select-yui_3_17_2_1_1604978065613_322623"
+                        class="form-item field select required hear-select-wrap">
+                        <label class="title" for="select-yui_3_17_2_1_1604978065613_32262-field">How did you hear about
+                            us? <span class="required" aria-hidden="true">*</span></label>
+                        <select class="hear-select field-element" id="00N1G000007gnV3" name="00N1G000007gnV3"
+                            title="How did you hear about us?" class="hear-select" required>
+                            <option value="">--None--</option>
+                            <option value="Google">Google</option>
+                            <option value="Referral">Referral</option>
+                            <option value="LinkedIn">LinkedIn</option>
+                            <option value="Facebook, Instagram or other social media">Facebook, Instagram or other
+                                social media</option>
+                            <option value="Email newsletter">Email newsletter</option>
+
+                            <option value="News Article">News Article</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                    </div>
+                    <div id="textarea-yui_3_17_2_1_1604517489640_3740" class="form-item field textarea other-field">
+                        <label class="title" for="textarea-yui_3_17_2_1_1604517489640_3740-field">If 'Referral' or
+                            'Other', please state below <span class="required" aria-hidden="true">*</span></label>
+                        <textarea class="field-element " id="00N1G000007gnYW" name="00N1G000007gnYW" type="text"
+                            wrap="soft"></textarea>
+                    </div>
+
+                    <input type="hidden" name="00N1G000007glVV" id="Domain" class="Domain"
+                        value="https://riazcapital.com/" />
+                    <input type="hidden" name="lead_source" id="lead_source" value="Web" class="lead_source">
+                    <input class="utm_medium" class="utm_medium" name="00N1G000007glV6" type="hidden" value="">
+                    <input id="utm_source" class="utm_source" name="00N1G000007glcW" type="hidden" />
+
+                    <input id="utm_campaign" class="utm_campaign" name="00N1G000007glVB" type="hidden" value="">
+
+                    <input id="adgroup" class="adgroup" name="00N1G000007glVG" type="hidden" value="">
+
+                    <input id="keyword" class="keyword" name="00N1G000007glVL" type="hidden" value="">
+
+                    <input id="adcopy" class="adcopy" name="00N1G000007glVk" type="hidden" value="">
+
+                    <input id="placement" class="placement" name="00N1G000007glVp" type="hidden" value="">
+
+                    <input id="device" class="device" name="00N1G000007glVf" type="hidden" value="">
+                    <input class="lead_source" type="hidden" name="lead_source" id="lead_source" value="Web" />
+                    <input id="matchtype" class="matchtype" name="00N1G000007glVQ" type="hidden" value="">
+                    <input type="hidden" name="recordType" id="recordType" value="0121G000000RlbM" class="recordType">
+
+                    <input type="hidden" name="00N37000005WW8h" value="https://riazcapital.com/contact-us" class="url"
+                        id="url" />
+                </div>
+                <div data-animation-role="button" class="form-button-wrapper form-button-wrapper--align-left">
+                    <div class="g-recaptcha" data-sitekey="6Le89mgbAAAAAKV8CI0HuR46Z_7GTzLRbFmG5UBU"></div>
+                    <input class="button sqs-system-button sqs-editable-button all-form-down-submit-btn" type="submit"
+                        value="Submit">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <script>
+        /* eslint-disable */
+        console.log('inside other');
+
+        const otherDiv = document.querySelector('.other-field');
+        const hearSelect = document.querySelector('.hear-select');
+        const hearSelectWrap = document.querySelector('.hear-select-wrap');
+        hearSelectWrap.style = none;
+        otherDiv.style.display = 'none';
+        // hearSelect.style.display = 'none';
+        hearSelect.required = false;
+        document.querySelector('.hear-select').addEventListener('change', function () {
+            // console.log('You selected: ', this.value);
+            if (this.value === 'Other' || this.value === 'Referral') {
+                otherDiv.style.display = 'block';
+
+                document.querySelector('.other-field textarea').required = true;
+            } else {
+                otherDiv.style.display = 'none';
+                document.querySelector('.other-field textarea').required = false;
+            }
+        });
+
+        // gain-select code here
+        const otherDiv2 = document.querySelector('.other-field2');
+        otherDiv2.style.display = 'none';
+        document.querySelector('.gain-select').addEventListener('change', function () {
+            // console.log('You selected: ', this.value);
+            if (this.value == 'Other') {
+                otherDiv2.style.display = 'block';
+
+                document.querySelector('.other-field2 textarea').required = true;
+            } else {
+                otherDiv2.style.display = 'none';
+                document.querySelector('.other-field2 textarea').required = false;
+            }
+        });
+        // Investment Offerings - select code here
+        const investofferDiv = document.querySelector('.investofferDiv');
+        investofferDiv.style.display = 'none';
+        document
+            .querySelector('.invest-offer-select')
+            .addEventListener('change', function () {
+                // console.log('You selected: ', this.value);
+                if (this.value == 'Investment Offerings') {
+                    investofferDiv.style.display = 'block';
+                    //   document.querySelector('.investofferDiv select').required = true;
+                    //   document.querySelector('.investofferDiv input').required = true;
+                } else {
+                    investofferDiv.style.display = 'none';
+                    //   document.querySelector('.investofferDiv select').required = false;
+                    //   document.querySelector('.investofferDiv input').required = false;
+                }
+            });
+    </script>
+    <!--  <script>
+        function formValidation(){
+            var udate = document.getElementById('datevisible');
+        console.log(udate.value);
+    var parts   = udate.value.split("-");
+        
+        
+        var year = parts[0];
+        var month = parts[1];
+        var day = parts[2];
+      console.log(year+" "+month+" "+day);
+        var ndate = month+"/"+day+"/"+year;
+       console.log(udate.value);
+        document.querySelector('.hide-date').value = ndate;
+        }
+        function formValidation2(){
+            var udate = document.getElementById('datevisible2');
+        console.log(udate.value);
+    var parts   = udate.value.split("-");
+        
+        
+        var year = parts[0];
+        var month = parts[1];
+        var day = parts[2];
+      console.log(year+" "+month+" "+day);
+        var ndate = month+"/"+day+"/"+year;
+       console.log(udate.value);
+        document.querySelector('.hide-date2').value = ndate;
+        }
+    </script>-->
+    <style>
+        .hide-date,
+        .hide-date2 {
+            display: none !important;
+        }
+    </style>
+</body>
+
+</html>

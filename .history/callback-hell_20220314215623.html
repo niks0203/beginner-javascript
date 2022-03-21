@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./base.css" rel="stylesheet" />
+</head>
+
+<body>
+    <style>
+        .go {
+            width: 25rem;
+            height: 25rem;
+            padding: 5rem;
+            margin: 5rem;
+            background-color: white;
+        }
+
+        .round {
+            border-radius: 50%;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+    <div class="go">Click Me!</div>
+    <script>
+        /* eslint-disable */
+        const go = document.querySelector('.go');
+        go.addEventListener('click', (e) => {
+            const el = e.currentTarget;
+            el.textContent = 'GO';
+            setTimeout(() => {
+                // make circle after 2 seconds
+                el.classList.add('round');
+                setTimeout(() => {
+                    el.classList.add('red');
+                    //make it square after 2.5 sec
+                    setTimeout(function () {
+                        el.classList.remove('round');
+                        //make it purple after 3s
+                        setTimeout(function () {
+                            el.classList.remove('red');
+                            el.classList.add('purple');
+                        }, 300)
+                    }, 250)
+                }, 500);
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>Calculate Age</h1>
+<p id ="showDetails"></p>
+<script type="text/javascript">
+	const users = [
+  {
+    birthday: "April 22, 1993",
+    names: {
+      first: "Keith",
+      last: "Buckley"
+    }
+  },
+  {
+    birthday: "January 3, 1975",
+    names: {
+      first: "Larry",
+      last: "Heep"
+    }
+  },
+  {
+    birthday: "February 12, 1944",
+    names: {
+      first: "Linda",	
+      last: "Bermeer"
+    }
+  }
+];
+
+function calculateAgeFn(user){
+	let todayDate = new Date();
+	let birthDate = new Date(user.birthday);
+
+	// let ageInMiliseconds = todayDate - birthDate;
+	//console.log(ageInMiliseconds);
+
+	// let miliseconds = ageInMiliseconds;
+
+	// let seconds = 1000;
+	// let minute = seconds * 60;
+	// let hour = minute * 60;
+	// let day = hour * 24;
+	// let month = day * 30;
+
+	// let year = day*365;
+
+	//console.log(year);
+
+
+	//Age Conversion
+
+	// let finalAgeYear = Math.round(miliseconds / year);
+	// let finalAgeMonth = finalAgeYear * 12;
+ //    console.log(finalAgeMonth);
+
+
+	let birthYear = todayDate.getFullYear() - birthDate.getFullYear();
+	// let birhMonth = todayDate.getMonth() - birthDate.getMonth();
+	// let birthDay = todayDate.getDay() - birthDate.getDay();
+
+
+	let birhMonth;
+    let birthDay;
+
+    if (todayDate.getMonth() >= birthDate.getMonth()){
+    	 birhMonth = todayDate.getMonth() - birthDate.getMonth();
+    	
+    }
+
+    else {
+    	birthYear--;	
+    	birhMonth = 12 + todayDate.getMonth() - birthDate.getMonth() -1;
+    }
+
+    if (todayDate.getDay() >= birthDate.getDay()){
+    	birthDay = todayDate.getDay() - birthDate.getDay();  
+    }
+    else {
+    	birhMonth--;
+    	birthDay = 31 + todayDate.getDay() - birthDate.getDay();
+    }
+    
+    //console.log(birhMonth);
+    
+	//console.log(birthYear, birhMonth, birthDay);
+
+	return {...user, birthYear, birhMonth, birthDay }
+}
+
+const updatedUsersList = users.map(calculateAgeFn);
+
+//console.log(updatedUsersList);
+
+
+const displayData = updatedUsersList.map(printDataFn);
+
+function printDataFn(detail) {
+
+  	return ([detail.names.first +" "+ detail.names.last + " Age is " + detail.birthYear +" Years  "+", "+ detail.birhMonth + " Months "+", " + detail.birthDay +"days"+  "<br>" + "<br>"]);
+}
+
+//console.log(displayData);
+
+document.getElementById('showDetails').innerHTML = displayData;
+
+</script>
+</body>
+</html>

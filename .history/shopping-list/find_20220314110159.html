@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>JavaScript Arrays</h1>
+    <h2>The find() Method</h2>
+
+    <p>find() returns the value of the first element in an array that passes a test (provided by a function):</p>
+
+    <p id="demo"></p>
+
+    <script>
+        /* eslint-disable */
+        const feedback = [{
+            "name": "bread",
+            "id": 1,
+            "complete": true
+        },
+        {
+            "name": "milk",
+            "id": 2,
+            "complete": true
+        },
+        {
+            "name": "eggs",
+            "id": 3,
+            "complete": true
+        }];
+
+        // document.getElementById('demo').innerHTML = JSON.stringify(feedback.find(findRate));
+
+        const itemRef = feedback.find(function (element) {
+            if (element.id === 2) {
+                return element;
+            }
+        })
+        // itemRef.name = 'changed';
+        console.log(itemRef);
+        console.log(feedback);
+        console.log('---------------------Filter Example--------------');
+        const feedback2 = [{
+            "name": "bread",
+            "id": 1,
+            "complete": true
+        },
+        {
+            "name": "milk",
+            "id": 2,
+            "complete": true
+        },
+        {
+            "name": "eggs",
+            "id": 3,
+            "complete": true
+        }];
+        const itemRef2 = feedback2.filter(function (element) {
+            if (element.id === 3) {
+                return element;
+            }
+        })
+        itemRef2.name = 'changed';
+        console.log(itemRef2);
+        console.log(feedback2);
+    </script>
+
+
+</body>
+
+</html>

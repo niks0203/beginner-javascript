@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API-Basics</title>
+</head>
+
+<body>
+    <p class="user"></p>
+</body>
+<script>
+    // const endpoint = 'https://api.github.com/users/wesbos';
+
+    // const userEl = document.querySelector('.user');
+    // userEl.textContent = 'Loading...';
+    // const wesPromise = fetch(endpoint);
+    // wesPromise
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         console.log(data);
+    //         userEl.textContent = `
+    //         ${data.name} - ${data.blog}
+    //         `;
+    //     });
+
+    // Implementing using await async
+
+    const baseEndpoint = 'https://api.github.com';
+    const userEl = document.querySelector('.user');
+    userEl.textContent = 'Loading...';
+    async function displayFn(username) { }
+    displayFn('wesbos');
+</script>
+
+</html>

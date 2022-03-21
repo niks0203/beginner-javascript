@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+
+<body>
+    <script>
+        /* eslint-disable */
+        function makePizza(toppings) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(`This is your pizza with toppings ${toppings.join(' ')}`);
+                }, 1000);
+            });
+        }
+        //chaining of promises
+        makePizza(['pepperoni'])
+            .then(function (pizza) {
+                console.log(pizza);
+                return makePizza(['cheese', 'feta']);
+            })
+            .then(function (pizza) {
+                console.log(pizza);
+                return makePizza(['hot peppers', 'onions', 'mushrooms']);
+            }).then(function (pizza) {
+                console.log(pizza);
+            })
+    </script>
+</body>
+
+</html>
